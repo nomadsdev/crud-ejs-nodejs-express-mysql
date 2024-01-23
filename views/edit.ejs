@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+  <div class="flex justify-center">
+    <div class="p-10">
+        <h1 class="text-3xl text-indigo-600">Edit Employee</h1>
+        <div class="bg-indigo-600 w-5 h-1 rounded-full"></div>
+    </div>
+</div>
+  <div class="flex justify-center p-10">
+    <form action="/add" method="post" class="flex gap-2 items-center">
+        <label class="text-green-600">Name :</label> <input type="text" name="name" value="<%= data.name %>" required class="border border-green-600 rounded-md pl-2">
+        <label class="text-blue-600">Occupation :</label> <input type="text" name="occupation" value="<%= data.occupation %>" required class="border border-blue-600 rounded-md pl-2">
+        <label class="text-indigo-600">Salary :</label> <input type="number" name="salary" value="<%= data.salary %>" required class="border border-indigo-600 rounded-md pl-2">
+        <button type="submit" class="text-white bg-green-600 rounded-md px-5 py-1 shadow-md">Update Employee</button>
+      </form>
+</div>
+</body>
+</html>
